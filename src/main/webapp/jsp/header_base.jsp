@@ -58,6 +58,14 @@
     <script src="codemirror/addon/search/matchesonscrollbar.js" type="text/javascript" ></script>
     <script src="codemirror/addon/search/jump-to-line.js" type="text/javascript" ></script>
 
+    <link rel="stylesheet" href="codemirror/addon/fold/foldgutter.css" />
+    <script src="codemirror/addon/fold/foldcode.js"></script>
+    <script src="codemirror/addon/fold/foldgutter.js"></script>
+    <script src="codemirror/addon/fold/indent-fold.js"></script>
+    <script src="codemirror/addon/fold/comment-fold.js"></script>
+    <script src="codemirror/addon/fold/xml-fold.js"></script>
+    <script src="codemirror/addon/fold/brace-fold.js"></script>
+
     <link href="codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
     <!-- <link href="codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" > -->
     <link href="codemirror/addon/dialog/dialog.css" rel="stylesheet" type="text/css" >

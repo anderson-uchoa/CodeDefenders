@@ -42,7 +42,12 @@
 			indentUnit: 4,
 			indentWithTabs: true,
 			matchBrackets: true,
-			mode: "text/x-java"
+			mode: "text/x-java",
+            lineNumbers: true,
+            lineWrapping: true,
+            extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
 		});
 		editorTest.on('beforeChange',function(cm,change) {
 			var text = cm.getValue();
@@ -58,7 +63,12 @@
 			lineNumbers: true,
 			matchBrackets: true,
 			mode: "text/x-java",
-			readOnly: true
+			readOnly: true,
+            lineNumbers: true,
+            lineWrapping: true,
+            extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
 		});
 		editorSUT.setSize("100%", 500);
 
@@ -70,7 +80,12 @@
 				lineNumbers: true,
 				matchBrackets: true,
 				mode: "text/x-java",
-				readOnly: true
+				readOnly: true,
+                lineNumbers: true,
+                lineWrapping: true,
+                extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+                foldGutter: true,
+                gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
 			});
 		}
 		/* Mutants diffs */
@@ -82,7 +97,12 @@
 				var editorDiff = CodeMirror.fromTextArea($(this).find('textarea')[0], {
 					lineNumbers: false,
 					mode: "diff",
-					readOnly: true /* onCursorActivity: null */
+					readOnly: true,
+                    lineNumbers: true,
+                    lineWrapping: true,
+                    extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+                    foldGutter: true,
+                    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]/* onCursorActivity: null */
 				});
 				editorDiff.setSize("100%", 500);
 			}
